@@ -1,23 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rpg_character_builder/home.dart';
 
 void main() {
   runApp(MaterialApp(home: Home()));
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "RPG Character Builder",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
-        ),
-        backgroundColor: Colors.brown[700],
-      ),
-      body: const Text("hello"),
-    );
-  }
 }
