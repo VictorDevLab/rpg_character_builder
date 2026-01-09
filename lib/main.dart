@@ -120,3 +120,37 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+//  class SandBox extends StatelessWidget {
+//   const SandBox({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: Text("Hello"), backgroundColor: Colors.amber),
+//       body: Row(
+//         mainAxisAlignment: MainAxisAlignment.spaceAround,
+//         children: [
+//           Container(
+//             color: Colors.brown[200],
+//             padding: EdgeInsets.all(20),
+//             height: 100,
+//             child: const Text("Blue macarony"),
+//           ),
+//           Container(
+//             color: Colors.brown[300],
+//             height: 100,
+//             padding: EdgeInsets.all(20),
+//             child: const Text("Red velvet"),
+//           ),
+//           Container(
+//             color: Colors.brown[200],
+//             height: 100,
+//             padding: EdgeInsets.all(20),
+//             child: const Text("Bonanza ok"),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
