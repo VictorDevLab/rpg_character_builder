@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(20),
             color: Colors.brown[200],
-            child: Text("My Coffee Preferences are"),
+            child: Text("My Coffee Preferences"),
           ),
           Container(
             padding: EdgeInsets.all(20),

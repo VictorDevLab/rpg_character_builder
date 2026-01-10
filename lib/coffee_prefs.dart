@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
 
-class CoffeePrefs extends StatelessWidget {
+class CoffeePrefs extends StatefulWidget {
   const CoffeePrefs({super.key});
 
+  @override
+  State<CoffeePrefs> createState() => _CoffeePrefsState();
+}
+
+class _CoffeePrefsState extends State<CoffeePrefs> {
+  int strength = 1;
+  int sugars = 1;
+
   void increaseStrength() {
-    print("Increasing strenth..");
+    setState(() {
+      strength = strength < 5 ? strength + 1 : 1;
+    });
   }
 
   void increaseSugars() {
-    print("Increasing sugars");
+    setState(() {
+      sugars = sugars < 5 ? sugars + 1 : 0;
+    });
   }
 
   @override
@@ -18,7 +30,7 @@ class CoffeePrefs extends StatelessWidget {
         Row(
           children: [
             const Text("Strength: "),
-            const Text("30"),
+            Text("$strength"),
             Image.asset(
               "assets/coffee_bean.png",
               width: 30,
@@ -36,7 +48,7 @@ class CoffeePrefs extends StatelessWidget {
         Row(
           children: [
             const Text("Sugars: "),
-            const Text("30"),
+            Text("$sugars"),
             Image.asset(
               "assets/sugar_cube.png",
               width: 30,
@@ -45,7 +57,7 @@ class CoffeePrefs extends StatelessWidget {
             ),
             const Expanded(child: SizedBox()),
             FilledButton(
-              onPressed: increaseStrength,
+              onPressed: increaseSugars,
               style: FilledButton.styleFrom(backgroundColor: Colors.brown),
               child: const Text("+"),
             ),
