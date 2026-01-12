@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rpg_character_builder/shared/styled_body_text.dart';
+import 'package:rpg_character_builder/shared/styled_button.dart';
 
 class CoffeePrefs extends StatefulWidget {
   const CoffeePrefs({super.key});
@@ -29,7 +31,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            const Text("Strength: "),
+            const StyledBodyText("Strength: "),
 
             for (int i = 0; i < strength; i++)
               Image.asset(
@@ -39,17 +41,13 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
                 colorBlendMode: BlendMode.multiply,
               ),
             const Expanded(child: SizedBox()),
-            FilledButton(
-              onPressed: increaseStrength,
-              style: FilledButton.styleFrom(backgroundColor: Colors.brown),
-              child: const Text("+"),
-            ),
+            StyledButton(onPressed: increaseStrength, child: const Text("+")),
           ],
         ),
         Row(
           children: [
-            const Text("Sugars: "),
-            if (sugars == 0) Text("Zero sugars"),
+            const StyledBodyText("Sugars: "),
+            if (sugars == 0) StyledBodyText("Zero sugars"),
 
             for (int i = 0; i < sugars; i++)
               Image.asset(
@@ -60,11 +58,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
               ),
 
             const Expanded(child: SizedBox()),
-            FilledButton(
-              onPressed: increaseSugars,
-              style: FilledButton.styleFrom(backgroundColor: Colors.brown),
-              child: const Text("+"),
-            ),
+            StyledButton(onPressed: increaseSugars, child: const Text("+")),
           ],
         ),
       ],
