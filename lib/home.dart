@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rpg_character_builder/coffee_prefs.dart';
+import 'package:rpg_character_builder/shared/styled_body_text.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -20,7 +21,7 @@ class Home extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(20),
             color: Colors.brown[200],
-            child: Text("My Coffee Preferences"),
+            child: StyledBodyText("My Coffee Preferences"),
           ),
           Container(
             padding: EdgeInsets.all(20),
